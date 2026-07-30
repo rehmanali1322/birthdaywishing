@@ -5,21 +5,21 @@
 
 export const BIRTHDAY_CONFIG = {
   recipient: {
-    name: "Ayaan",
-    nickname: "Little Star",
+    name: "Moiz",
+    nickname: "Dear Moiz",
     age: 1,
     birthdayLabel: "1st",
-    dateOfBirth: "2025-08-01",
+    dateOfBirth: "2025-07-31",
   },
 
   from: {
-    name: "Mamu",
+    name: "Rehman",
     relationship: "Your very proud Mamu",
   },
 
   copy: {
     introEyebrow: "A LITTLE SURPRISE IS WAITING",
-    introTitle: "For our tiny superstar",
+    introTitle: "For our Little superstar",
     introBody: "One whole year of giggles, cuddles and magic deserves a celebration made only for you.",
     chapterOneTitle: "Once upon a tiny star…",
     chapterOneBody: "You arrived, looked at the world with those curious little eyes, and somehow made every ordinary day feel brighter.",
@@ -52,18 +52,18 @@ export const BIRTHDAY_CONFIG = {
   ],
 
   memories: [
-    { src: "assets/photos/photo-1.svg", alt: "First memory placeholder", caption: "That first tiny hello", note: "The day our family got a little more magical." },
-    { src: "assets/photos/photo-2.svg", alt: "Second memory placeholder", caption: "The sweetest little smile", note: "Proof that happiness can fit inside one tiny face." },
-    { src: "assets/photos/photo-3.svg", alt: "Third memory placeholder", caption: "Tiny adventures", note: "A whole world to discover, one curious look at a time." },
-    { src: "assets/photos/photo-4.svg", alt: "Fourth memory placeholder", caption: "Our little superstar", note: "One year down. A lifetime of beautiful stories to go." },
+    { src: "assets/photos/photo-1.jpeg", alt: "First memory placeholder", caption: "That first tiny hello", note: "The day our family got a little more magical." },
+    { src: "assets/photos/photo-2.jpeg", alt: "Second memory placeholder", caption: "The sweetest little smile", note: "Proof that happiness can fit inside one tiny face." },
+    { src: "assets/photos/photo-3.jpeg", alt: "Third memory placeholder", caption: "Tiny adventures", note: "A whole world to discover, one curious look at a time." },
+    { src: "assets/photos/photo-4.jpeg", alt: "Fourth memory placeholder", caption: "Our little superstar", note: "One year down. A lifetime of beautiful stories to go." },
   ],
 
   media: {
-    heroPhoto: "assets/photos/hero.svg",
-    finalPhoto: "assets/photos/final.svg",
-    cakeImage: "", // Optional: e.g. "assets/uploads/cake.png". Blank = premium coded cake.
+    heroPhoto: "assets/photos/Hero.jpeg",
+    finalPhoto: "assets/photos/final.jpeg",
+    cakeImage: "", // Optional: e.g. "assets/uploads/Cake.jpeg". Blank = premium coded cake.
     candleImage: "", // Optional: e.g. "assets/uploads/candle.png". Blank = coded candle.
-    music: "assets/audio/birthday-lullaby.wav",
+    music: "assets/audio/❤️Happy Birthday Song 🎂 Happy Birthday To You🎊 #happybirthdaysong - Happy Birthday to You (128k).mp3",
   },
 
   theme: {
