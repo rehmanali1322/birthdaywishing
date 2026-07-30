@@ -13,7 +13,7 @@ export const BIRTHDAY_CONFIG = {
   },
 
   from: {
-    name: "Rehman",
+    name: "Rehman Ali",
     relationship: "Your very proud Mamu",
   },
 
