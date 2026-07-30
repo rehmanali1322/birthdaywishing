@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" role="img" aria-label="Birthday gift">
+  <defs><linearGradient id="a" x1="0" x2="1"><stop stop-color="#ff897d"/><stop offset="1" stop-color="#ff6e79"/></linearGradient><filter id="s"><feDropShadow dy="10" stdDeviation="8" flood-opacity=".15"/></filter></defs>
+  <g filter="url(#s)">
+    <rect x="55" y="90" width="210" height="145" rx="24" fill="url(#a)"/>
+    <rect x="42" y="78" width="236" height="54" rx="18" fill="#ff9d90"/>
+    <rect x="143" y="78" width="34" height="157" fill="#ffd66b"/>
+    <path d="M160 82c-44-43-75-37-75-10 0 25 40 24 75 10z" fill="#bdebd3" stroke="#fff" stroke-width="7"/>
+    <path d="M160 82c44-43 75-37 75-10 0 25-40 24-75 10z" fill="#bdebd3" stroke="#fff" stroke-width="7"/>
+    <circle cx="160" cy="84" r="18" fill="#ffd66b"/>
+  </g>
+</svg>

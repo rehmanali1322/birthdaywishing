@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <title>Birthday Studio</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="studio-page">
+  <main class="studio-shell">
+    <header class="studio-top">
+      <div>
+        <p class="eyebrow eyebrow--blue">OWNER PREVIEW TOOLS</p>
+        <h1>Birthday Studio</h1>
+        <p>Change text and upload your own photos, cake, candle or song for an instant preview on this browser.</p>
+      </div>
+      <a class="studio-preview-link" href="../index.html">Open birthday preview →</a>
+    </header>
+
+    <section class="studio-card">
+      <h2>Personal details</h2>
+      <p>These edits are saved only in this browser, so you can preview without touching code.</p>
+      <div class="studio-grid">
+        <div class="field"><label for="name">Child name</label><input id="name" maxlength="40" /></div>
+        <div class="field"><label for="nickname">Nickname</label><input id="nickname" maxlength="40" /></div>
+        <div class="field"><label for="birthdayLabel">Birthday label</label><input id="birthdayLabel" maxlength="12" placeholder="1st" /></div>
+        <div class="field"><label for="fromName">From</label><input id="fromName" maxlength="40" placeholder="Mamu" /></div>
+        <div class="field" style="grid-column:1/-1"><label for="introTitle">Opening title</label><input id="introTitle" maxlength="80" /></div>
+        <div class="field" style="grid-column:1/-1"><label for="finalLine">Final message</label><textarea id="finalLine" maxlength="420"></textarea></div>
+      </div>
+      <div class="studio-actions" style="margin-top:16px">
+        <button class="primary-button" id="saveText" type="button">Save preview text</button>
+        <a class="soft-button" href="../index.html">Preview now</a>
+      </div>
+    </section>
+
+    <section class="studio-card">
+      <h2>Upload your media</h2>
+      <p>Images and music are stored in this browser using IndexedDB. They immediately override the coded placeholders in your preview.</p>
+      <div class="upload-grid">
+        <label class="upload-slot"><span>Hero photo</span><input type="file" data-media-key="heroPhoto" accept="image/png,image/jpeg,image/webp,image/gif" /></label>
+        <label class="upload-slot"><span>Final photo</span><input type="file" data-media-key="finalPhoto" accept="image/png,image/jpeg,image/webp,image/gif" /></label>
+        <label class="upload-slot"><span>Custom cake image</span><input type="file" data-media-key="cakeImage" accept="image/png,image/jpeg,image/webp,image/gif" /></label>
+        <label class="upload-slot"><span>Custom candle image</span><input type="file" data-media-key="candleImage" accept="image/png,image/jpeg,image/webp,image/gif" /></label>
+        <label class="upload-slot"><span>Birthday song</span><input type="file" data-media-key="music" accept="audio/mpeg,audio/wav,audio/ogg,audio/mp4" /></label>
+        <label class="upload-slot"><span>Memory photo 1</span><input type="file" data-media-key="memory-0" accept="image/png,image/jpeg,image/webp,image/gif" /></label>
+        <label class="upload-slot"><span>Memory photo 2</span><input type="file" data-media-key="memory-1" accept="image/png,image/jpeg,image/webp,image/gif" /></label>
+        <label class="upload-slot"><span>Memory photo 3</span><input type="file" data-media-key="memory-2" accept="image/png,image/jpeg,image/webp,image/gif" /></label>
+        <label class="upload-slot"><span>Memory photo 4</span><input type="file" data-media-key="memory-3" accept="image/png,image/jpeg,image/webp,image/gif" /></label>
+      </div>
+      <p class="upload-help">Recommended: photos below 3 MB each; song below 12 MB. PNG/WebP with transparent background works best for a custom cake or candle.</p>
+      <p class="studio-status" id="mediaStatus" aria-live="polite"></p>
+    </section>
+
+    <section class="studio-card">
+      <h2>Important for the final Netlify link</h2>
+      <div class="warning-note">
+        Studio uploads are intentionally <b>browser-local preview overrides</b>; a static Netlify site cannot write back into your GitHub project files. For the final link that your nephew/family opens on other phones, copy your real files into <b>assets/photos/</b> or <b>assets/uploads/</b>, place your song in <b>assets/audio/</b>, then update the paths in <b>config/birthday-config.js</b> and push to GitHub. The included <b>CUSTOMIZE.md</b> shows the exact filenames and properties.
+      </div>
+      <div class="studio-actions" style="margin-top:16px">
+        <button class="soft-button" id="resetStudio" type="button">Reset local preview changes</button>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="studio.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#fff8e9" />
+  <meta name="description" content="A premium first birthday story made with love." />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <title>A tiny birthday surprise ✨</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='86'%3E🎂%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="boot-screen" id="bootScreen" aria-live="polite">
+    <div class="boot-cloud boot-cloud--one"></div>
+    <div class="boot-cloud boot-cloud--two"></div>
+    <div class="boot-mark" aria-hidden="true">1</div>
+    <p>Wrapping a tiny birthday surprise…</p>
+    <div class="boot-bar"><span id="bootBar"></span></div>
+  </div>
+
+  <main id="app" class="app-shell" aria-live="polite" hidden>
+    <div class="ambient-bg" aria-hidden="true">
+      <span class="ambient-blob ambient-blob--1"></span>
+      <span class="ambient-blob ambient-blob--2"></span>
+      <span class="ambient-blob ambient-blob--3"></span>
+      <span class="ambient-cloud ambient-cloud--1"></span>
+      <span class="ambient-cloud ambient-cloud--2"></span>
+    </div>
+
+    <div class="celebration-rain" id="celebrationRain" aria-hidden="true"></div>
+
+    <header class="top-ui">
+      <div class="progress-wrap" aria-label="Birthday story progress">
+        <span class="progress-dot is-active"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span>
+      </div>
+      <button class="icon-button" id="musicButton" type="button" aria-label="Mute music" title="Music">
+        <span aria-hidden="true" id="musicIcon">♫</span>
+      </button>
+    </header>
+
+    <section class="scene scene--intro is-active" data-scene="0" aria-labelledby="introTitle">
+      <div class="scene-inner intro-layout">
+        <div class="intro-copy reveal-stack">
+          <p class="eyebrow" data-bind="copy.introEyebrow"></p>
+          <div class="one-badge" aria-hidden="true">
+            <span class="one-badge__halo"></span>
+            <span class="one-badge__number">1</span>
+            <span class="one-badge__star">★</span>
+          </div>
+          <h1 id="introTitle"><span data-bind="copy.introTitle"></span><br><strong data-bind="recipient.name"></strong></h1>
+          <p class="lead" data-bind="copy.introBody"></p>
+          <button class="primary-button sparkle-button" type="button" data-action="start">
+            <span>Open your surprise</span><span aria-hidden="true">✨</span>
+          </button>
+          <p class="micro-copy">Best enjoyed with sound on · made with love</p>
+        </div>
+        <div class="intro-art" aria-hidden="true">
+          <div class="orbit orbit--one"></div><div class="orbit orbit--two"></div>
+          <img src="assets/illustrations/teddy.svg" alt="" class="teddy-hero" />
+          <span class="floating-star floating-star--1">★</span><span class="floating-star floating-star--2">✦</span><span class="floating-balloon">🎈</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene scene--storybook" data-scene="1" aria-labelledby="chapterTitle">
+      <div class="scene-inner story-layout">
+        <div class="photo-stage photo-stage--hero">
+          <div class="photo-tape photo-tape--left"></div><div class="photo-tape photo-tape--right"></div>
+          <img data-media="heroPhoto" src="assets/photos/hero.svg" alt="Birthday child portrait" />
+          <span class="photo-sticker">our little<br><b>sunshine</b> ☀</span>
+        </div>
+        <article class="storybook-card">
+          <span class="chapter-pill">CHAPTER ONE</span>
+          <h2 id="chapterTitle" data-bind="copy.chapterOneTitle"></h2>
+          <p data-bind="copy.chapterOneBody"></p>
+          <div class="signature-line"><span>with endless love</span><b data-bind="from.name"></b></div>
+          <button class="soft-button" type="button" data-action="next">Turn the page <span aria-hidden="true">→</span></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="scene scene--year" data-scene="2" aria-labelledby="yearTitle">
+      <div class="scene-inner centered-layout">
+        <p class="eyebrow eyebrow--blue">LOOK HOW FAR YOU'VE COME</p>
+        <h2 id="yearTitle" data-bind="copy.oneYearTitle"></h2>
+        <p class="subline">A whole first chapter — filled with tiny discoveries and very big love.</p>
+        <div class="big-one" aria-hidden="true"><span>1</span><small>YEAR</small></div>
+        <div class="stat-grid" id="statsGrid"></div>
+        <div class="mini-timeline" aria-hidden="true"><span>newborn</span><i></i><span>giggles</span><i></i><span>crawls</span><i></i><span>ONE!</span></div>
+        <button class="primary-button" type="button" data-action="next">There’s more <span aria-hidden="true">🎁</span></button>
+      </div>
+    </section>
+
+    <section class="scene scene--gift" data-scene="3" aria-labelledby="giftTitle">
+      <div class="scene-inner gift-layout">
+        <div class="gift-copy">
+          <p class="eyebrow">SOMETHING SMALL, WRAPPED WITH BIG LOVE</p>
+          <h2 id="giftTitle" data-bind="copy.giftTitle"></h2>
+          <p>Tap the present. We promise there’s no broccoli inside.</p>
+        </div>
+        <button class="gift-button" id="giftButton" type="button" data-action="open-gift" aria-label="Open the birthday gift">
+          <span class="gift-wiggle"><img src="assets/illustrations/gift.svg" alt="" /></span>
+          <span class="tap-hint">tap to unwrap</span>
+        </button>
+        <div class="gift-reveal" id="giftReveal" aria-hidden="true">
+          <span class="gift-reveal__spark">✦</span>
+          <p>Officially unlocked:</p>
+          <strong>LEVEL <span data-bind="recipient.age"></span> ✨</strong>
+          <small>More giggles. More adventures. More cake.</small>
+          <button class="soft-button" type="button" data-action="next">Let’s get the cake</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene scene--cake" data-scene="4" aria-labelledby="cakeTitle">
+      <div class="scene-inner cake-layout">
+        <div class="cake-copy">
+          <p class="eyebrow eyebrow--coral">THE MOST IMPORTANT PART</p>
+          <h2 id="cakeTitle" data-bind="copy.cakeTitle"></h2>
+          <p id="cakeInstruction">Tap the glowing candle when your tiny wish is ready.</p>
+        </div>
+        <div class="cake-zone">
+          <img id="customCake" class="custom-cake" alt="Custom birthday cake" hidden />
+          <div class="coded-cake" id="codedCake" aria-label="Birthday cake">
+            <div class="candle-wrap">
+              <img id="customCandle" class="custom-candle" alt="Custom candle" hidden />
+              <button class="candle" id="candleButton" type="button" data-action="candle" aria-label="Blow out the birthday candle">
+                <span class="flame"><i></i></span><span class="wick"></span><span class="candle-stick"></span>
+              </button>
+            </div>
+            <div class="cake-top"><span class="icing-drop icing-drop--1"></span><span class="icing-drop icing-drop--2"></span><span class="icing-drop icing-drop--3"></span></div>
+            <div class="cake-tier cake-tier--top"><span class="cake-dots">● &nbsp; ● &nbsp; ● &nbsp; ●</span></div>
+            <div class="cake-tier cake-tier--bottom">
+              <span class="cake-name">HAPPY <b data-bind="recipient.birthdayLabel"></b> BIRTHDAY</span>
+              <strong data-bind="recipient.name"></strong>
+            </div>
+            <div class="cake-plate"></div>
+          </div>
+          <div class="wish-cloud" id="wishCloud">make a little wish… ✨</div>
+        </div>
+        <button class="primary-button is-hidden" id="cakeNext" type="button" data-action="next">Wish made! Continue <span aria-hidden="true">♡</span></button>
+      </div>
+    </section>
+
+    <section class="scene scene--memories" data-scene="5" aria-labelledby="memoriesTitle">
+      <div class="scene-inner memory-layout">
+        <div class="memory-heading">
+          <p class="eyebrow eyebrow--blue">OUR FAVOURITE LITTLE MOMENTS</p>
+          <h2 id="memoriesTitle" data-bind="copy.memoriesTitle"></h2>
+          <p>Swipe the cards or use the arrows. Every photo is another tiny piece of the story.</p>
+        </div>
+        <div class="memory-stage" id="memoryStage" tabindex="0" aria-label="Birthday memory gallery">
+          <div class="memory-track" id="memoryTrack"></div>
+        </div>
+        <div class="memory-controls">
+          <button class="round-button" type="button" data-action="memory-prev" aria-label="Previous memory">←</button>
+          <div class="memory-dots" id="memoryDots" aria-label="Memory position"></div>
+          <button class="round-button" type="button" data-action="memory-next" aria-label="Next memory">→</button>
+        </div>
+        <button class="soft-button" type="button" data-action="next">Next little chapter</button>
+      </div>
+    </section>
+
+    <section class="scene scene--reasons" data-scene="6" aria-labelledby="reasonsTitle">
+      <div class="scene-inner reasons-layout">
+        <div class="reasons-copy">
+          <p class="eyebrow">JUST A FEW THINGS…</p>
+          <h2 id="reasonsTitle" data-bind="copy.reasonsTitle"></h2>
+          <p>Tap each little card to open it.</p>
+        </div>
+        <div class="reason-grid" id="reasonGrid"></div>
+        <button class="primary-button is-hidden" id="reasonNext" type="button" data-action="next">One last little note <span aria-hidden="true">💌</span></button>
+      </div>
+    </section>
+
+    <section class="scene scene--letter" data-scene="7" aria-labelledby="letterTitle">
+      <div class="scene-inner letter-layout">
+        <div class="letter-heading">
+          <p class="eyebrow eyebrow--coral">FOR YOU TO READ ONE DAY</p>
+          <h2 id="letterTitle" data-bind="copy.letterTitle"></h2>
+          <p>A tiny time capsule from your first birthday.</p>
+        </div>
+        <button class="envelope" id="envelope" type="button" data-action="open-letter" aria-label="Open birthday letter">
+          <span class="envelope-back"></span><span class="envelope-paper"><b>for <span data-bind="recipient.nickname"></span></b><i>with all my love</i></span><span class="envelope-flap"></span><span class="wax-seal">★</span>
+        </button>
+        <article class="letter-card" id="letterCard" aria-hidden="true">
+          <div class="letter-copy" id="letterCopy"></div>
+          <p class="letter-signoff">Always in your corner,<br><strong data-bind="from.name"></strong> ♡</p>
+          <button class="primary-button" type="button" data-action="next">Your birthday finale <span aria-hidden="true">✨</span></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="scene scene--finale" data-scene="8" aria-labelledby="finalTitle">
+      <div class="scene-inner finale-layout">
+        <div class="final-photo-wrap">
+          <span class="final-crown" aria-hidden="true">♛</span>
+          <div class="final-photo-ring"><img data-media="finalPhoto" src="assets/photos/final.svg" alt="Special final birthday photo" /></div>
+          <span class="final-badge"><b data-bind="recipient.age"></b><small>year old</small></span>
+        </div>
+        <div class="final-copy">
+          <p class="eyebrow eyebrow--blue">THE STORY IS ONLY BEGINNING</p>
+          <h2 id="finalTitle">Happy <span data-bind="recipient.birthdayLabel"></span> Birthday,<br><strong data-bind="recipient.name"></strong>!</h2>
+          <p data-bind="copy.finalLine"></p>
+          <div class="final-from"><span>Made with a ridiculous amount of love by</span><b data-bind="from.name"></b></div>
+          <div class="final-actions">
+            <button class="primary-button" type="button" data-action="replay">Replay the magic ↻</button>
+            <button class="soft-button" type="button" id="shareButton">Share this smile</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <audio id="birthdayAudio" preload="metadata" loop></audio>
+  </main>
+
+  <noscript><div class="noscript">Please enable JavaScript to open this birthday surprise.</div></noscript>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

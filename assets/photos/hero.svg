@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" role="img" aria-label="HERO PHOTO">
+ <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#bde8ff"/><stop offset="1" stop-color="#fff0cf"/></linearGradient></defs>
+ <rect width="900" height="1100" rx="52" fill="url(#g)"/>
+ <circle cx="160" cy="170" r="75" fill="#fff" opacity=".45"/><circle cx="740" cy="220" r="42" fill="#fff" opacity=".4"/>
+ <path d="M95 850c150-130 265-75 360 14 97-139 217-147 355-25v261H95z" fill="#fff" opacity=".32"/>
+ <g fill="#fff" opacity=".9"><path d="M450 260l22 45 50 7-36 35 9 50-45-24-45 24 9-50-36-35 50-7z"/><circle cx="450" cy="590" r="142" opacity=".32"/></g>
+ <text x="450" y="560" text-anchor="middle" font-family="Arial Rounded MT Bold,Arial,sans-serif" font-weight="700" font-size="58" fill="#2d3442">HERO PHOTO</text>
+ <text x="450" y="630" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" fill="#2d3442" opacity=".72">your favourite portrait</text>
+ <text x="450" y="990" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#2d3442" opacity=".55">Replace this file with your nephew's photo</text>
+</svg>

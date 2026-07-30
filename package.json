@@ -1,0 +1,19 @@
+{
+  "name": "little-star-first-birthday",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Premium responsive first-birthday story experience for Netlify",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build.mjs",
+    "lint": "node scripts/lint.mjs",
+    "typecheck": "node scripts/typecheck.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:e2e": "python tests/e2e.py",
+    "check": "npm run lint && npm run typecheck && npm run test && npm run build"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "type": "module"
+}
