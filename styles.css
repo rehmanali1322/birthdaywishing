@@ -200,3 +200,46 @@ p { font-size:clamp(15px,2.5vw,18px); line-height:1.7; color:rgba(45,52,66,.72);
 .reason-card__back{opacity:0;transform:scale(.94) translateY(7px)}
 .reason-card.is-open .reason-card__front{opacity:0;transform:scale(.94) translateY(-6px);pointer-events:none}
 .reason-card.is-open .reason-card__back{opacity:1;transform:none}
+/* FINAL FIX — show complete memory photos on mobile and desktop */
+.memory-photo-wrap {
+  width: 100%;
+  height: auto !important;
+  min-height: 0 !important;
+  aspect-ratio: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #eef8fc;
+}
+
+.memory-photo-wrap img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 650px !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+@media (max-width: 820px) {
+  .memory-photo-wrap img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 52dvh !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .memory-photo-wrap img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 48dvh !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+}
