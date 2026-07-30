@@ -63,7 +63,7 @@ export const BIRTHDAY_CONFIG = {
     finalPhoto: "assets/photos/final.jpeg",
     cakeImage: "", // Optional: e.g. "assets/uploads/Cake.jpeg". Blank = premium coded cake.
     candleImage: "", // Optional: e.g. "assets/uploads/candle.png". Blank = coded candle.
-    music: "assets/audio/❤️Happy Birthday Song 🎂 Happy Birthday To You🎊 #happybirthdaysong - Happy Birthday to You (128k).mp3",
+    music: "assets/audio/Happy Birthday To You.mp3",
   },
 
   theme: {
